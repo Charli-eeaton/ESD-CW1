@@ -39,7 +39,7 @@ public class dateViewer extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         out.print("<table border='1' width='100%'");
-        out.print("<tr><th>Booking ID</th><th>User Name</th><th>Appointment Reason</th><th>Time</th><th>Date</th>");
+        out.print("<tr><th>Booking ID</th><th>User Name</th><th>Appointment Reason</th><th>Time</th><th>Date</th><th>Doctor or Nurse</th>");
         List<com.UserInput> list = MyJBDC.getAllDates();
         
         
@@ -64,7 +64,7 @@ public class dateViewer extends HttpServlet {
 
         for (com.UserInput e:list) {
             //out.print("<tr><td>" + e.getID()+ "</td><td>" + e.getName()+ "</td><td>" + e.getReason()+ "</td><td>" + e.getTime()+ "</td><td>" + e.getDate() + "</td><td>" + "<input type='radio' name='deleteRadio' value='"+e.getID() + "'>" + "</td><tr>");
-            out.print("<tr><td>" + e.getID()+ "</td><td>" + e.getName()+ "</td><td>" + e.getReason()+ "</td><td>" + e.getTime()+ "</td><td>" + e.getDate() + "</td><td>" + "<a href = \"./dateRemover?userID="+e.getID()+"\">Delete" + "</td><tr>");
+            out.print("<tr><td>" + e.getID()+ "</td><td>" + e.getName()+ "</td><td>" + e.getReason()+ "</td><td>" + e.getTime()+ "</td><td>" + e.getDate() + "</td><td>"  + e.getDN() + "</td><td>"+ "<a href = \"./dateRemover?userID="+e.getID()+"\">Delete" + "</td><tr>");
             
         }
  
