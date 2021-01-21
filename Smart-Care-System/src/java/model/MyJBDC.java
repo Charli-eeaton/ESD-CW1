@@ -359,4 +359,42 @@ public class MyJBDC {
         }catch(Exception ex) {ex.printStackTrace();}
         return status;
    }
+   public static int REprescription(com.UserInput e){
+        int status=0;
+        try {
+            Connection con=MyJBDC.getConnection();
+            PreparedStatement ps=con.prepareStatement("insert into APP.PRESCRIPTIONSREQ(NAME, PRMEDI, REASON, DOCTOR) values (?,?,?,?)");   
+            ps.setString(1,e.getCName());
+            ps.setString(2,e.getMedication());
+            ps.setString(3,e.getDose());
+            ps.setString(4,e.getCost());
+            
+            
+            
+            status=ps.executeUpdate();
+            con.close();
+        }catch(Exception ex) {ex.printStackTrace();}
+        return status;
+    }
+    public static List<com.UserInput> getprice(){
+        List list=new ArrayList();
+        try{
+            Connection con=MyJBDC.getConnection();
+            
+            // CHANGE THIS TO A CERTAIN DATE  PreparedStatement ps=con.prepareStatement("select * from APP.CLIENTS where CTYPE = 'NHS'");
+            PreparedStatement ps=con.prepareStatement("select * from APP.PRICES");
+            ResultSet rs=ps.executeQuery();
+            
+            while(rs.next()){
+                com.UserInput e= new com.UserInput();
+                e.setprice(rs.getString(1));
+               ;
+                list.add(e);
+            }
+            con.close();
+        }catch(Exception x){x.printStackTrace();}
+        return list;
+    }
+
 }
+
