@@ -45,25 +45,16 @@ public static void main(String[] args) {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-
-        out.print("<table border='1' width='100%'");
-        out.print("<tr><th>Price in £ per 10 min Surgery </th>");
-       // out.print (getprice()+ "</td><td>" );
-        List<com.UserInput> list = MyJBDC.getprice();
+        int price = 100;
         
         
+        out.println("The Price of 10 minuets of surgery was " + price);
+        String newPrice = (String)request.getParameter("new Value");
+        out.println("The Price of 10 minuets of surgery is now " + newPrice);
+        
 
-       
-            
-            
+  
 
-        for (com.UserInput e:list) {
-            //out.print("<tr><td>" + e.getID()+ "</td><td>" + e.getName()+ "</td><td>" + e.getReason()+ "</td><td>" + e.getTime()+ "</td><td>" + e.getDate() + "</td><td>" + "<input type='radio' name='deleteRadio' value='"+e.getID() + "'>" + "</td><tr>");
-            out.print("<tr><td>" + e.getprice()+ "</td><td>" );
-            
-        }
- 
-        out.print("</table>");
         
         
         
