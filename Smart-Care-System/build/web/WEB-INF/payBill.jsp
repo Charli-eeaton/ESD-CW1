@@ -51,15 +51,14 @@
         <div class="w3-container" style="padding:32px">
 
             <h2>List</h2>
-            <form method="POST" action="payBill">  
+            <form method="POST" action="BillPay">  
                 <table>
-                    <tr>
-                        Pay Outstanding Bills Or View Past Bills:
-                    <input type='radio' name='type' value='pay'> View and Pay
-                    <input type='radio' name='type' value='paid'> View Paid
-                    </tr>
-                </table>
-                <td> <input type="submit" value="Confirm"/></td>
+                     <tr>
+                    <td>clientID number:</td>
+                    <td><input type="text" name="name"/></td>
+                </tr>
+                 </table>
+            <td> <input type="submit" value="Confirm"/></td>
                 <br>
                 <hr>
            
