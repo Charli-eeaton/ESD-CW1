@@ -395,6 +395,18 @@ public class MyJBDC {
         }catch(Exception x){x.printStackTrace();}
         return list;
     }
+    public static int billpay(com.UserInput e){
+        int status=0;
+        try {
+            Connection con=MyJBDC.getConnection();
+            PreparedStatement ps=con.prepareStatement("delete from APP.PAYMENT where NAME = ?");   
+            ps.setInt(1,e.getID());
+            
+            status=ps.executeUpdate();
+            con.close();
+        }catch(Exception ex) {ex.printStackTrace();}
+        return status;
+   }
 
 }
 
