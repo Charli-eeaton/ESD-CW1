@@ -25,6 +25,7 @@
             <input type="radio" name="option" value="patientTransfers">Transfer a Patient<br />
         <h4>Add options:</h4>
             <input type="radio" name="option" value="addUser">Add a new Doctor or Nurse user <br>
+            <input type="radio" name="option" value="prescription"> Generate prescription<br>
         <h4>Calendar options:</h4> 
             <input type="radio" name="option" value="calendar">Book an appointment with a Doctor <br>
             <input type="radio" name="option" value="schedule">Check daily surgery schedule <br>  
