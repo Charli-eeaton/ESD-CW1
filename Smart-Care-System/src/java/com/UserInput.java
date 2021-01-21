@@ -11,7 +11,7 @@ package com;
  */
 public class UserInput {
     private int id,turnover;
-    private String name,username,password,role,address,type,option,date,time,amount,medi,dose,reason,dob,permUsername,transferID,ReQ,Place,CName,startDate,endDate;
+    private String name,username,password,role,address,type,option,date,time,amount,medi,dose,reason,dob,permUsername,transferID,ReQ,Place,CName,startDate,endDate,price;
     
 
 
@@ -196,6 +196,12 @@ public class UserInput {
     }
     public void setTurnover(int turnover){
         this.turnover = turnover;
+    }
+    public String getprice(){
+        return price;
+    }
+    public void setprice(String price){
+        this.price = price;
     }
 
 
