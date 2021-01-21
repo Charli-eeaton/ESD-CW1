@@ -169,6 +169,43 @@
         <servlet-name>patientTransfers</servlet-name>
         <url-pattern>/patientTransfers.do</url-pattern>
     </servlet-mapping>
+     <servlet>
+        <servlet-name>prescription</servlet-name>
+        <servlet-class>pages.prescription</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>prescription</servlet-name>
+        <url-pattern>/prescription</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>prescription</servlet-name>
+        <url-pattern>/prescription.do</url-pattern>
+    </servlet-mapping>
+     <servlet>
+        <servlet-name>REprescription</servlet-name>
+        <servlet-class>pages.REprescription</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>REprescription</servlet-name>
+        <url-pattern>/REprescription</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>REprescription</servlet-name>
+        <url-pattern>/REprescription.do</url-pattern>
+    </servlet-mapping>
+         <servlet>
+        <servlet-name>priceViewer</servlet-name>
+        <servlet-class>pages.priceViewer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>priceViewer</servlet-name>
+        <url-pattern>/priceViewer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>priceViewer</servlet-name>
+        <url-pattern>/priceViewer.do</url-pattern>
+    </servlet-mapping>
+  
     <session-config>
         <session-timeout>
             20
