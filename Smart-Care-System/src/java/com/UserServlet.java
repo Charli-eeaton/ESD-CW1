@@ -54,6 +54,10 @@ public class UserServlet extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/deleteP.jsp").forward(request, response); 
          } else if (request.getParameter("option").equals("calculateTurnover")){
             request.getRequestDispatcher("/WEB-INF/Calculate.jsp").forward(request, response);
+         } else if (request.getParameter("option").equals("Rprescription")){
+            request.getRequestDispatcher("/WEB-INF/prescriptionReq.jsp").forward(request, response);
+         } else if (request.getParameter("option").equals("viewPrices")){
+            request.getRequestDispatcher("/WEB-INF/viewPrices.jsp").forward(request, response);
         } else {
             request.setAttribute("option", "error");
             request.getRequestDispatcher("/WEB-INF/error.jsp").forward(request, response);
