@@ -18,7 +18,7 @@
         <h3> Please select one of the following options: <h3>
         <form method="post" action="UserServlet"> 
         List options:</h4> 
-            <input type="radio" name="option" value="list0">List all patients and all invoices per selected period (inc. costs)<br />
+            <input type="radio" name="option" value="listPeriod">List all patients and all invoices per selected period (inc. costs)<br />
             <input type="radio" name="option" value="list0">List private patients and NHS patients, separately<br />
         <h4>Add options:</h4>
             <input type="radio" name="option" value="addUser">Add a new Doctor or Nurse user <br>

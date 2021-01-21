@@ -169,6 +169,18 @@
         <servlet-name>patientTransfers</servlet-name>
         <url-pattern>/patientTransfers.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>listPeriod</servlet-name>
+        <servlet-class>pages.listPeriod</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>listPeriod</servlet-name>
+        <url-pattern>/listPeriod</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>listPeriod</servlet-name>
+        <url-pattern>/listPeriod.do</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             20

@@ -23,17 +23,14 @@ public class UserServlet extends HttpServlet {
         if (request.getParameter("option").equals("list0")) {
             request.getRequestDispatcher("/WEB-INF/list0.jsp").forward(request, response);
             
+        } else if (request.getParameter("option").equals("listPeriod")) {
+            request.getRequestDispatcher("/WEB-INF/listPeriod.jsp").forward(request, response);    
         } else if (request.getParameter("option").equals("addUser")) {
             request.getRequestDispatcher("/WEB-INF/addUser.jsp").forward(request, response);
-            
-        }
-        else if (request.getParameter("option").equals("NewPatient")) {
+        } else if (request.getParameter("option").equals("NewPatient")) {
             request.getRequestDispatcher("/WEB-INF/addUser.jsp").forward(request, response);
-            
-        }
-        else if (request.getParameter("option").equals("Register")) {
-            request.getRequestDispatcher("/WEB-INF/addPatient.jsp").forward(request, response);
-            
+        } else if (request.getParameter("option").equals("Register")) {
+            request.getRequestDispatcher("/WEB-INF/addPatient.jsp").forward(request, response); 
         } else if (request.getParameter("option").equals("calendar")) {
             request.getRequestDispatcher("/WEB-INF/calendar.jsp").forward(request, response);
         } else if (request.getParameter("option").equals("schedule")) {

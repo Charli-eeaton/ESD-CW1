@@ -204,6 +204,30 @@ public class MyJBDC {
         }catch(Exception x){x.printStackTrace();}
         return list;
     }
+    public static List<com.UserInput> getPatientsPeriod(com.UserInput e){
+        List list=new ArrayList();
+        try{
+            Connection con=MyJBDC.getConnection();
+            
+            PreparedStatement ps=con.prepareStatement("select * from APP.PAYMENT where APPDATE = ?");
+            
+            ps.setString(1,e.getDate());
+            ResultSet rs=ps.executeQuery();
+            
+            while(rs.next()){
+                
+                com.UserInput x= new com.UserInput();
+                x.setName(rs.getString(1));
+                x.setDate(rs.getString(2));
+                x.setAmountDue(rs.getString(3));
+                x.setCost(rs.getString(4));
+                x.setMedication(rs.getString(5));
+                list.add(x);
+            }
+            con.close();
+        }catch(Exception x){x.printStackTrace();}
+        return list;
+    }
     
     public static List<com.UserInput> getAllDates(){
         List list=new ArrayList();
