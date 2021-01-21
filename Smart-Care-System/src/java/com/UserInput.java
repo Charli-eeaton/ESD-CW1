@@ -11,7 +11,8 @@ package com;
  */
 public class UserInput {
     private int id,turnover;
-    private String name,username,password,role,address,type,option,date,time,amount,medi,dose,reason,dob,permUsername,transferID,ReQ,Place,CName,startDate,endDate,price;
+    private String name,username,password,role,address,type,option,date,time,amount,medi,dose,reason,dob,permUsername,transferID,ReQ,Place,CName,startDate,endDate,DN, price;
+    
     
 
 
@@ -114,6 +115,12 @@ public class UserInput {
     public void setTime(String time) {
         this.time = time;
     }
+     public String getDN() {
+	return DN;
+    }
+    public void setDN(String DN) {
+        this.DN = DN;
+    }
 
 
 
@@ -203,6 +210,4 @@ public class UserInput {
     public void setprice(String price){
         this.price = price;
     }
-
-
 }
